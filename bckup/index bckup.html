@@ -1,0 +1,1359 @@
+<!DOCTYPE html>
+
+<!--
+==========================================================
+TABLE OF CONTENTS
+==========================================================
+1. Navigation         - ID: nhs-header
+2. Home Page          - ID: home
+3. Guides Page        - ID: guides
+4. FAQs Page          - ID: faqs
+5. Catalogue Page     - ID: CC
+6. Stat & Mand Page   - ID: SaMT
+7. Non-Stat & Mand    - ID: NSaMT
+8. EPR Training       - ID: EPR
+9. Support            - ID: SUP
+==========================================================
+-->
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mid Yorkshire Teaching NHS Trust Learning and Development Hub</title>
+  <!-- Bootstrap 5.3.6 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Custom Stylesheet -->
+  <link href="style.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- ======================================================
+=                     NAVIGATION SECTION                  =
+========================================================= -->
+  <header class="nhs-header">
+    <div class="container">
+      <div class="row">
+
+        <div class="banner-wrapper">
+          <img src="https://assets.codepen.io/8889025/MY-Logo-Banner.png" class="Banner_image" alt="Welcome Hub Banner">
+          <div class="banner-text-overlay">
+            <h1>Mid Yorkshire Teaching NHS Trust</h1>
+          </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg">
+          <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+              <span class="navbar-toggler-icon">
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+              <ul class="navbar-nav mx-auto">
+                <li class="nav-item"><a class="nav-link" onclick="showPage('home')">Home</a></li>
+                <li class="nav-item"><a class="nav-link" onclick="showPage('guides')">Guides</a></li>
+                <li class="nav-item"><a class="nav-link" onclick="showPage('faqs')">FAQs</a></li>
+                <li class="nav-item"><a class="nav-link" onclick="showPage('CC')">Catalogue</a></li>
+                <!--<li class="nav-item"><a class="nav-link" onclick="showPage('SUP')">Support Request</a></li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="contactDropdown" role="button" data-bs-toggle="dropdown" onclick="showPage('CC');">
+                    Catalogue
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li class="dropdown-submenu">
+                      <a class="dropdown-item" onclick="showPage('SaMT');">Statutory and Mandatory Training</a>
+                      <a class="dropdown-item" onclick="showPage('NSaMT');">Non Statutory and Mandatory Training</a>
+                      
+                    </li>
+                    <!--
+              <li class="dropdown-submenu">
+                <a class="dropdown-item submenu-toggle" onclick="showPage('contact'); showSubSection('emergency')">Emergency</a>
+                <ul class="submenu dropdown-menu">
+                  <li><a class="dropdown-item" onclick="showPage('contact'); showSubSection('urgent')">Urgent Care</a></li>
+                  <li><a class="dropdown-item" onclick="showPage('contact'); showSubSection('ambulance')">Ambulance Services</a></li>
+                </ul>
+              </li>
+-->
+              </ul>
+              </li>
+              </ul>
+            </div>
+          </div>
+
+        </nav>
+
+        <!-- Combined Toolbar and Search -->
+        <div class="container mt-3">
+          <div class="row align-items-center g-2">
+            <!-- Search Bar (left, stretches as needed) -->
+            <div class="col">
+              <input type="text" id="searchInput" class="form-control" placeholder="Search the site" onkeyup="searchPages()">
+            </div>
+
+            <!-- Control Panel (right, auto-width) -->
+            <div class="col-auto">
+              <div class="d-flex flex-wrap align-items-center gap-2 control-toolbar p-2 rounded">
+                <!-- Theme Selector -->
+                <label for="themeSelector" class="visually-hidden">Choose Theme</label>
+                <select id="themeSelector" class="form-select form-select-sm w-auto">
+                  <option value="blue">💙 NHS Blue</option>
+                  <option value="green">💚 NHS Green</option>
+                  <option value="grey">🩶 NHS Grey</option>
+                  <option value="pink">💗 NHS Pink</option>
+                  <option value="purple">💜 NHS Purple</option>
+                  <option value="red">❤️ NHS Red</option>
+                  <option value="yellow">💛 NHS Yellow</option>
+                  <option value="calm">🌫 Calm Grey</option>
+                  <option value="contrast">⚠️ High Contrast</option>
+                </select>
+
+                <!-- Text Scaling -->
+                <div class="btn-group btn-group-sm" role="group" aria-label="Text Size">
+                  <button onclick="setTextSize('scale-small')" class="btn btn-outline-secondary">A–</button>
+                  <button onclick="setTextSize('scale-medium')" class="btn btn-outline-secondary">A</button>
+                  <button onclick="setTextSize('scale-large')" class="btn btn-outline-secondary">A+</button>
+                  <button onclick="setTextSize('scale-xlarge')" class="btn btn-outline-secondary">A++</button>
+                </div>
+
+                <!-- Dark Mode -->
+                <button id="toggleDark" class="btn btn-sm btn-outline-primary">
+                  🌙 Dark Mode
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+  </header>
+  <!-- ======================================================
+=                     HOME PAGE SECTION                   =
+========================================================= -->
+  <div id="home" class="page active">
+    <div class="container">
+      <div class="banner-wrapper">
+        <img src="https://assets.codepen.io/8889025/MY-Logo-Banner.png" class="Banner_image" alt="Welcome Hub Banner">
+        <div class="banner-text-overlay">
+          <h2>Learning and Development Hub</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 gradient-col d-flex align-items-center justify-content-center">
+          <h3 class="gradient-text">Learning and Development Hub</h3>
+        </div>
+        <div class="col-md-8">
+          <h4>Welcome to the Learning and Development Hub</h4>
+          <p>The hub provides access to a range of information to support personal learning and development needs, guidance on using ESR Learning Management and a catalogue of available training courses.</p>
+          <p>We hope you find this page useful and informative. Please feel free to explore the different sections and links. If you have any feedback or suggestions, please let us know. We value your input and appreciate your dedication to providing quality health care services. Thank you for being part of our team.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ======================================================
+=                     GUIDES PAGE SECTION                 =
+========================================================= -->
+  <div id="guides" class="page">
+    <div class="container">
+      <div class="banner-wrapper">
+        <img src="https://assets.codepen.io/8889025/MY-Logo-Banner.png" class="Banner_image" alt="Welcome Hub Banner">
+        <div class="banner-text-overlay">
+          <h2>Learning and Development Hub</h2>
+        </div>
+      </div>
+      <div class="row">
+
+        <div class="col-md-4 gradient-col d-flex align-items-center justify-content-center">
+          <h3 class="gradient-text">Guidance</h3>
+        </div>
+        <div class="col-md-8">
+          <h4>ESR Learning Management Guidance</h4>
+          <p>This section provides access to user guides on how to use the ESR Learning Management system.</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md">
+          <!-- Section A1 -->
+          <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#A1Modal">
+            How to use the My Compliance Portlet to manage your mandatory training
+          </button>
+          <!-- Modal -->
+          <div class="modal fade" id="A1Modal" tabindex="-1" aria-labelledby="A1ModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+              <div class="modal-content">
+                <!-- Themed Header -->
+                <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                  <h5 class="modal-title mb-0" id="complianceIssueModalLabel">How to use the My Compliance Portlet to manage your mandatory training</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- Modal Body -->
+                <div class="card-body">
+                  <iframe src="https://scribehow.com/embed/PIG4DQZLRr6NG346ToihJg?as=video" width="100%" height="800" allow="fullscreen" style="aspect-ratio: 16 / 12; border: 0; min-height: 480px"></iframe>
+                  <a class="btn btn-primary w-100 my-2" href="#" onclick="openPopup('https://scribehow.com/shared/PIG4DQZLRr6NG346ToihJg');" role="button">How to use the My Compliance Portlet to manage your mandatory training</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section A2 -->
+          <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#A2Modal">
+            Identifying Training that is Outstanding
+          </button>
+          <!-- Modal -->
+          <div class="modal fade" id="A2Modal" tabindex="-1" aria-labelledby="A2ModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+              <div class="modal-content">
+                <!-- Themed Header -->
+                <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                  <h5 class="modal-title mb-0" id="complianceIssueModalLabel">Identifying Training that is Outstanding</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- Modal Body -->
+                <div class="card-body">
+                  <iframe src="https://scribehow.com/shared/PIG4DQZLRr6NG346ToihJg?scrollToActionId=f250e1dd" width="100%" height="800" allow="fullscreen" style="aspect-ratio: 16 / 12; border: 0; min-height: 480px"></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section A3 -->
+          <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#A3Modal">
+            Enrolling onto e-Learning Courses
+          </button>
+          <!-- Modal -->
+          <div class="modal fade" id="A3Modal" tabindex="-1" aria-labelledby="A3ModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+              <div class="modal-content">
+                <!-- Themed Header -->
+                <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                  <h5 class="modal-title mb-0" id="complianceIssueModalLabel">Enrolling onto e-Learning Courses</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- Modal Body -->
+                <div class="card-body">
+                  <iframe src="https://scribehow.com/viewer/PIG4DQZLRr6NG346ToihJg?scrollToActionId=426c0f0f" width="100%" height="800" allow="fullscreen" style="aspect-ratio: 16 / 12; border: 0; min-height: 480px"></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section A4 -->
+          <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#A4Modal">
+            Playing e-Learning Courses you are Enrolled On
+          </button>
+          <!-- Modal -->
+          <div class="modal fade" id="A4Modal" tabindex="-1" aria-labelledby="A4ModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+              <div class="modal-content">
+                <!-- Themed Header -->
+                <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                  <h5 class="modal-title mb-0" id="complianceIssueModalLabel">Playing e-Learning Courses you are Enrolled On</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- Modal Body -->
+                <div class="card-body">
+                  <iframe src="https://scribehow.com/viewer/PIG4DQZLRr6NG346ToihJg?scrollToActionId=4c19c4b1" width="100%" height="800" allow="fullscreen" style="aspect-ratio: 16 / 12; border: 0; min-height: 480px"></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section A5 -->
+          <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#A5Modal">
+            Enrolling onto Classroom Training
+          </button>
+          <!-- Modal -->
+          <div class="modal fade" id="A5Modal" tabindex="-1" aria-labelledby="A5ModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+              <div class="modal-content">
+                <!-- Themed Header -->
+                <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                  <h5 class="modal-title mb-0" id="complianceIssueModalLabel">Enrolling onto Classroom Training</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- Modal Body -->
+                <div class="card-body">
+                  <iframe src="https://scribehow.com/viewer/PIG4DQZLRr6NG346ToihJg?scrollToActionId=17ab0147" width="100%" height="800" allow="fullscreen" style="aspect-ratio: 16 / 12; border: 0; min-height: 480px"></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section A6 -->
+          <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#A6Modal">
+            Viewing Details of Classes you are Booked On
+          </button>
+          <!-- Modal -->
+          <div class="modal fade" id="A6Modal" tabindex="-1" aria-labelledby="A6ModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+              <div class="modal-content">
+                <!-- Themed Header -->
+                <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                  <h5 class="modal-title mb-0" id="complianceIssueModalLabel">Viewing Details of Classes you are Booked On</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- Modal Body -->
+                <div class="card-body">
+                  <iframe src="https://scribehow.com/viewer/PIG4DQZLRr6NG346ToihJg?scrollToActionId=1fda98e6" width="100%" height="800" allow="fullscreen" style="aspect-ratio: 16 / 12; border: 0; min-height: 480px"></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ======================================================
+=                     FAQS PAGE SECTION                   =
+========================================================= -->
+  <div id="faqs" class="page">
+    <div class="container">
+      <div class="banner-wrapper">
+        <img src="https://assets.codepen.io/8889025/MY-Logo-Banner.png" class="Banner_image" alt="Welcome Hub Banner">
+        <div class="banner-text-overlay">
+          <h2>Learning and Development Hub</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 gradient-col d-flex align-items-center justify-content-center">
+          <h3 class="gradient-text">FAQs</h3>
+        </div>
+
+        <div class="col-md-8">
+          <h4>ESR Learning Management Guidance</h4>
+          <p>This section provides access to user guides on how to use the ESR Learning Management system.</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md">
+
+          <!-- Section B1 
+          <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#B1Modal">
+            How do I log into the ESR Portal
+          </button>
+          <!-- Modal 
+          <div class="modal fade" id="B1Modal" tabindex="-1" aria-labelledby="B1ModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+              <div class="modal-content">
+                <!-- Themed Header 
+                <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                  <h5 class="modal-title mb-0" id="complianceIssueModalLabel">How do I log into the ESR Portal</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- Modal Body 
+                <div class="card-body">
+                  <p>See link below to take you to Organisational Development’s Intranet page</p>
+                  <a class="btn btn-block btn-primary" href="https://nhs.sharepoint.com/:w:/r/sites/RXF_OrgDev/_layouts/15/Doc.aspx?sourcedoc=%7BA8DB7263-27E8-4651-B4CD-7391FCCAD020%7D&file=Instructions-for-Logging-into-the-ESR-Portal--as-of-01.04.25-.docx&action=default&mobileredirect=true" target="_blank">
+                    Organisational Development’s Intranet page
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section B2 -->
+          <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#B2Modal">
+            What are the core training subjects that all staff in MYT have to complete
+          </button>
+          <!-- Modal -->
+          <div class="modal fade" id="B2Modal" tabindex="-1" aria-labelledby="B2ModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+              <div class="modal-content">
+                <!-- Themed Header -->
+                <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                  <h5 class="modal-title mb-0" id="complianceIssueModalLabel">What are the core training subjects that all staff in MYT have to complete</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- Modal Body -->
+                <div class="card-body">
+                  <p>See link below to take you to Organisational Development’s Intranet page</p>
+                  <a class="btn btn-block btn-primary" href="https://nhs.sharepoint.com/sites/RXF_OrgDev/SitePages/MyMAST.aspx" target="_blank">
+                    Organisational Development’s Intranet page
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Section B3 -->
+          <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#B3Modal">
+            What are the role specific training subjects that specifically identified staff roles in MYT have to complete
+          </button>
+          <!-- Modal -->
+          <div class="modal fade" id="B3Modal" tabindex="-1" aria-labelledby="B3ModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+              <div class="modal-content">
+                <!-- Themed Header -->
+                <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                  <h5 class="modal-title mb-0" id="complianceIssueModalLabel">What are the role specific training subjects that specifically identified staff roles in MYT have to complete</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- Modal Body -->
+                <div class="card-body">
+                  <p>See link below to take you to Organisational Development’s Intranet page</p>
+                  <a class="btn btn-block btn-primary" href="https://nhs.sharepoint.com/sites/RXF_OrgDev/SitePages/MYRole.aspx" target="_blank">
+                    Organisational Development’s Intranet page
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Section B4 -->
+          <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#B4Modal">
+            Instructions for completing once in employment eLearning
+          </button>
+          <!-- Modal -->
+          <div class="modal fade" id="B4Modal" tabindex="-1" aria-labelledby="B4ModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+              <div class="modal-content">
+                <!-- Themed Header -->
+                <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                  <h5 class="modal-title mb-0" id="complianceIssueModalLabel">Instructions for completing once in employment eLearning</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- Modal Body -->
+                <div class="card-body">
+                  <p>See link below to take you to Organisational Development’s Intranet page</p>
+                  <a class="btn btn-block btn-primary" href="https://nhs.sharepoint.com/:w:/r/sites/RXF_OrgDev/_layouts/15/Doc.aspx?sourcedoc=%7B89A40DF8-3DD2-4DC6-B6EB-79F57E7BEDBD%7D&file=Instructions-for-finding-Once-in-employment-MAST-packages-in-ESR--as-of-01.04.25-.docx&action=default&mobileredirect=true" target="_blank">
+                    Organisational Development’s Intranet page
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section B5 -->
+          <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#B5Modal">
+            Instructions for completing eLearning with renewal frequencies
+          </button>
+          <!-- Modal -->
+          <div class="modal fade" id="B5Modal" tabindex="-1" aria-labelledby="B5ModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+              <div class="modal-content">
+                <!-- Themed Header -->
+                <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                  <h5 class="modal-title mb-0" id="complianceIssueModalLabel">Instructions for completing eLearning with renewal frequencies</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- Modal Body -->
+                <div class="card-body">
+                  <p>See link below to take you to Organisational Development’s Intranet page</p>
+                  <a class="btn btn-block btn-primary" href="https://nhs.sharepoint.com/:w:/r/sites/RXF_OrgDev/_layouts/15/Doc.aspx?sourcedoc=%7BB4CEF178-4F79-49BD-AF98-DB109175968D%7D&file=Instructions-for-finding-MAST-packages-in-ESR--as-of-01.04.25-.docx&action=default&mobileredirect=true" target="_blank">
+                    Organisational Development’s Intranet page
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section B6 -->
+          <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#B6Modal">
+            I have completed some training and my compliance has not been updated, what can I do?
+          </button>
+          <!-- Modal -->
+          <div class="modal fade" id="B6Modal" tabindex="-1" aria-labelledby="B6ModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+              <div class="modal-content">
+                <!-- Themed Header -->
+                <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                  <h5 class="modal-title mb-0" id="complianceIssueModalLabel">I have completed some training and my compliance has not been updated, what can I do?</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- Modal Body -->
+                <div class="card-body">
+                  <ul>
+                    <li><i>E-learning:</i> Please ensure you have completed the e-learning through a learning certificate, and that you have clicked the house button to exit the course.
+                    <li><i>Face-to-face/MS Teams:</i> Please allow 10 working days for class sessions to be updated, as these are processed manually.
+                    <li>If your competencies still have not been updated, please contact Organisational Development on <a href="mailto:midyorks.org.dev@nhs.net">midyorks.org.dev@nhs.net</a>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Section B7 -->
+          <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#B7Modal">
+            Is mandatory training that is completed in another organisation recognised by Mid Yorkshire Teaching NHS Trust?
+          </button>
+          <!-- Modal -->
+          <div class="modal fade" id="B7Modal" tabindex="-1" aria-labelledby="B7ModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+              <div class="modal-content">
+                <!-- Themed Header -->
+                <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                  <h5 class="modal-title mb-0" id="complianceIssueModalLabel">Is mandatory training that is completed in another organisation recognised by Mid Yorkshire Teaching NHS Trust?</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- Modal Body -->
+                <div class="card-body">
+                  <p>Some training may differ from trust to trust, but most should transfer when joining via the IAT process. If any training is incorrect or hasn’t transferred, please email <a href="mailto:midyorks.org.dev@nhs.net">midyorks.org.dev@nhs.net</a>. The team can investigate and process any documentation, screenshots, or learning records manually.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Section B8 -->
+          <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#B8Modal">
+            What do I do if my certification subscription status is "expired"?
+          </button>
+          <!-- Modal -->
+          <div class="modal fade" id="B8Modal" tabindex="-1" aria-labelledby="B8ModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+              <div class="modal-content">
+                <!-- Themed Header -->
+                <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                  <h5 class="modal-title mb-0" id="complianceIssueModalLabel">What do I do if my certification subscription status is "expired"?</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- Modal Body -->
+                <div class="card-body">
+                  <p>Once your certification has expired, you’ll need to renew the competency. If you’re struggling to access it or have queries, email <a href="mailto:midyorks.nlms@nhs.net">midyorks.nlms@nhs.net</a> Be sure to complete training shortly after accessing the course—if a competency expires mid-progress, your progress may reset. </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section B9 -->
+          <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#B9Modal">
+            What do I do if I believe the 'My Compliance' portlet is showing the incorrect requirement for my role, including requirements that are missing.
+          </button>
+          <!-- Modal -->
+          <div class="modal fade" id="B9Modal" tabindex="-1" aria-labelledby="B9ModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+              <div class="modal-content">
+                <!-- Themed Header -->
+                <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                  <h5 class="modal-title mb-0" id="complianceIssueModalLabel">What do I do if I believe the 'My Compliance' portlet is showing the incorrect requirement for my role, including requirements that are missing.</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- Modal Body -->
+                <div class="card-body">
+                  <p>Email <a href="mailto:midyorks.org.dev@nhs.net">midyorks.org.dev@nhs.net</a> with the details of the incorrect or missing requirement so they can review them on your behalf.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section B10 -->
+          <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#B10Modal">
+            Greyed out or missing 'Play' button - How to access the course in a different way
+          </button>
+          <!-- Modal -->
+          <div class="modal fade" id="B10Modal" tabindex="-1" aria-labelledby="B10ModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+              <div class="modal-content">
+                <!-- Themed Header -->
+                <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                  <h5 class="modal-title mb-0" id="complianceIssueModalLabel">Greyed out or missing 'Play' button - How to access the course in a different way</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- Modal Body -->
+                <div class="card-body">
+                  <ol>
+                    <li>On your ESR Homepage, click ‘My Compliance’ under the Learning and Development Portlet. Select the course and click the magnifying glass.
+                    <li>If not subscribed, click ‘Details’, then ‘Subscribe’, and enrol on the course.
+                    <li>On the next page, click ‘Enrol’ onto the course modules.
+                    <li>If the green play button is still unavailable, use the ‘Select an action’ drop-down and click ‘Play’.
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End of Secrtions -->
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================
+=                     CATALOGUE SECTION                   =
+========================================================= -->
+  <div id="CC" class="page">
+    <div class="container">
+      <div class="banner-wrapper">
+        <img src="https://assets.codepen.io/8889025/MY-Logo-Banner.png" class="Banner_image" alt="Welcome Hub Banner">
+        <div class="banner-text-overlay">
+          <h2>Learning and Development Hub</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 gradient-col d-flex align-items-center justify-content-center">
+          <h3 class="gradient-text">Course Catalogue</h3>
+        </div>
+
+        <div class="col-md-8">
+          <h4>Course Catalogue</h4>
+          <p>This section provides access to courses some of which you can book directly via ESR yourself after you are logged into your own ESR.</p>
+          <p>The categories are listed below.</p>
+
+          <h5>Leadership Courses</h5>
+
+          <!-- Section C2 -->
+          <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#C2Modal">
+            Aspiring Medical Leaders
+          </button>
+          <!-- Modal -->
+          <div class="modal fade" id="C2Modal" tabindex="-1" aria-labelledby="C2ModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+              <div class="modal-content">
+                <!-- Themed Header -->
+                <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                  <h5 class="modal-title mb-0" id="complianceIssueModalLabel">Aspiring Medical Leader Programme</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- Modal Body -->
+                <div class="card-body">
+
+                  <section class="programme-info py-3 px-4 bg-light border rounded">
+                    <h2 class="mb-3">Aspiring Medical Leader Programme</h2>
+                    <p>
+                      Expressions of Interest will be welcomed from consultants who seek to become an <strong>Aspiring Medical Leader</strong>, developing excellent and knowledgeable working in supportive and experienced teams who are competent to lead and compassionate in approach.
+                    </p>
+                    <p>
+                      The programme consists of various developmental components including:
+                    <ul>
+                      <li>Masterclasses</li>
+                      <li>Experiential learning</li>
+                      <li>Continued professional development</li>
+                      <li>Mapping to the <abbr title="Faculty of Medical Leadership and Management">FMLM</abbr> Leadership and Management Standards for Medical Professionals</li>
+                    </ul>
+                    Delivered annually over a one-year period commencing around May each year.
+                    </p>
+                    <p><strong>Approximate commitment:</strong> 40 hrs / 10 PAs development plus 30 hrs e-learning.</p>
+                    <p>
+                      For further information, please email
+                      <a href="mailto:midyorks.org.dev@nhs.net">midyorks.org.dev@nhs.net</a>.
+                    </p>
+                  </section>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Section C3 -->
+          <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#C3Modal">
+            Appraisal Skills for Managers/Appraisers (Non Medical)
+          </button>
+          <!-- Modal -->
+          <div class="modal fade" id="C3Modal" tabindex="-1" aria-labelledby="C3ModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+              <div class="modal-content">
+                <!-- Themed Header -->
+                <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                  <h5 class="modal-title mb-0" id="complianceIssueModalLabel">Appraisal Skills for Managers/Appraisers (Non Medical)</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- Modal Body -->
+                <div class="card-body">
+                  <section class="appraisal-course-info py-3 px-4 bg-light border rounded">
+                    <h2 class="mb-3">Appraisal Skills for Managers/Appraisers (Non Medical)</h2>
+
+                    <p>
+                      Effective performance appraisal and staff development contribute directly to improved patient outcomes.
+                      That is why regulators such as the <strong>Care Quality Commission</strong> and the <strong>Department of Health and Social Care</strong> emphasise the importance of appraisal and development reviews.
+                    </p>
+
+                    <p>
+                      Every member of staff should have an <strong>annual appraisal</strong>, including a <strong>six-monthly review</strong> (as a minimum),
+                      to ensure regular dialogue throughout the year. This gives staff a chance to receive feedback and reflect on progress against agreed objectives.
+                    </p>
+
+                    <p>
+                      Appraisals are also a key opportunity to:
+                    <ul>
+                      <li>Reflect on Trust Values and Behaviours</li>
+                      <li>Develop a Personal Development Plan (PDP)</li>
+                      <li>Support professional requirements such as <abbr title="Nursing and Midwifery Council">NMC</abbr> revalidation</li>
+                    </ul>
+                    </p>
+
+                    <p>
+                      All new staff should receive an appraisal within <strong>3 months</strong> of starting their role.
+                      For details, visit the <em>Trust Policies</em> intranet page.
+                    </p>
+
+                    <p>
+                      Appraisals must be recorded via <strong>ESR</strong>. A downloadable handout is available to help with this process.
+                    </p>
+
+                    <h3 class="mt-4">📄 Accessing Appraisal Documentation</h3>
+                    <ol>
+                      <li>Go to <strong>Departments</strong> on the Intranet.</li>
+                      <li>Click <strong>H</strong> and select <strong>Human Resources</strong>.</li>
+                      <li>Choose the box at the top of the page labelled <strong>"During Employment"</strong>.</li>
+                      <li>Scroll past <strong>"Developing Your Team"</strong> to find the <strong>Appraisals</strong> drop-down menu containing all relevant documentation.</li>
+                    </ol>
+
+                    <h3 class="mt-4">🗓️ Booking a Course</h3>
+                    <p>
+                      Dates for this course are available in ESR.
+
+                      <button aria-expanded="false" class="btn btn-primary btn-block" onclick="openPopup('https://my.esr.nhs.uk/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&oas=JKmb0a4n87vbpMoUiRvTvA..&params=V3RaAUNI1f82Iw10TelnTFJtWzaBNgBZKmR8uVaVD43jqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c');">Book Place</button>
+                  </section>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section C4 -->
+          <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#C4Modal">
+            Coaching Conversations
+          </button>
+          <!-- Modal -->
+          <div class="modal fade" id="C4Modal" tabindex="-1" aria-labelledby="C4ModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+              <div class="modal-content">
+                <!-- Themed Header -->
+                <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                  <h5 class="modal-title mb-0" id="complianceIssueModalLabel">Coaching Conversations</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- Modal Body -->
+                <div class="card-body">
+                  <section class="coaching-conversation-info py-3 px-4 bg-light border rounded">
+                    <h2 class="mb-3">Coaching Conversations</h2>
+
+                    <p>
+                      Would you like to have more effective and impactful conversations with individuals or your team?
+                      This <strong>1-day programme</strong> focuses on the skills and techniques needed to have a truly great coaching conversation.
+                    </p>
+
+                    <p>
+                      The course also introduces a variety of tools that can be used to structure conversations including:
+                    <ul>
+                      <li>1:1 Meetings</li>
+                      <li>Supportive Appraisals</li>
+                      <li>Supervision Sessions</li>
+                    </ul>
+                    </p>
+
+                    <p>
+                      For further information, please email
+                      <a href="mailto:midyorks.org.dev@nhs.net">midyorks.org.dev@nhs.net</a>.
+                    </p>
+                  </section>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section C5 -->
+          <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#C5Modal">
+            Consultant & Senior Doctors Development Programme
+          </button>
+          <!-- Modal -->
+          <div class="modal fade" id="C5Modal" tabindex="-1" aria-labelledby="C5ModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+              <div class="modal-content">
+                <!-- Themed Header -->
+                <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                  <h5 class="modal-title mb-0" id="complianceIssueModalLabel">Consultant & Senior Doctors Development Programme</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- Modal Body -->
+                <div class="card-body">
+                  <section class="consultant-dev-programme py-3 px-4 bg-light border rounded">
+                    <h2 class="mb-3">Consultant &amp; Senior Doctors Development Programme</h2>
+
+                    <p>
+                      All new <strong>Consultants, Senior Doctors and Managers</strong> will be invited to participate in this leadership programme aimed at:
+                    <ul>
+                      <li>Setting clear expectations</li>
+                      <li>Appreciating clinical leadership skills</li>
+                      <li>Empowering compassionate leaders</li>
+                    </ul>
+                    </p>
+
+                    <p>
+                      The programme begins with participation in the <strong>Embedding the Values &amp; Behaviours (EVB)</strong> Programme, and includes various developmental components such as:
+                    <ul>
+                      <li>Masterclasses</li>
+                      <li>Experiential learning</li>
+                      <li>Continued professional development</li>
+                      <li>Alignment to the <abbr title="Healthcare Leadership Model">HLM</abbr> Dimensions</li>
+                      <li>Mapped to FMLM Leadership and Management Standards</li>
+                    </ul>
+                    </p>
+
+                    <p>
+                      These components are delivered throughout the year, with participants joining upon commencement within the Trust.
+                    </p>
+
+                    <p><strong>Approximate commitment:</strong> 48 hours / 12 PAs development</p>
+
+                    <p>
+                      For further information, please email
+                      <a href="mailto:midyorks.org.dev@nhs.net">midyorks.org.dev@nhs.net</a>.
+                    </p>
+                  </section>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section C6 -->
+          <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#C6Modal">
+            Embedding Values & Behaviours
+          </button>
+          <!-- Modal -->
+          <div class="modal fade" id="C6Modal" tabindex="-1" aria-labelledby="C6ModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+              <div class="modal-content">
+                <!-- Themed Header -->
+                <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                  <h5 class="modal-title mb-0" id="complianceIssueModalLabel">Embedding Values & Behaviours</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- Modal Body -->
+                <div class="card-body">
+                  <section class="evb-programme py-3 px-4 bg-light border rounded">
+                    <h2 class="mb-3">Embedding Values &amp; Behaviours</h2>
+
+                    <p>
+                      The <strong>Embedding Values &amp; Behaviours</strong> programme was introduced in <strong>late 2018</strong>.
+                      It provides leadership development for <strong>Band 7 and above</strong>, empowering the organisation through a compassionate lens.
+                    </p>
+
+                    <p>
+                      Hosted at a venue in the heart of our community, participants invest <strong>3 days</strong> in learning how to:
+                    <ul>
+                      <li>Adapt their leadership style to suit different situations</li>
+                      <li>Trust their team with greater autonomy</li>
+                      <li>Become more instrumental in leading organisational change</li>
+                    </ul>
+                    </p>
+
+                    <p>
+                      Each participant also receives a <strong>PRINT psychometric report</strong>, helping them understand how to remain motivated and productive.
+                    </p>
+
+                    <p><strong>Recommended for:</strong> Colleagues at Band 7 or above.</p>
+
+                    <p>
+                      For further information, please email
+                      <a href="mailto:midyorks.org.dev@nhs.net">midyorks.org.dev@nhs.net</a>.
+                    </p>
+                  </section>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section C7 -->
+          <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#C7Modal">
+            Facilitating Staff Experience
+          </button>
+          <!-- Modal -->
+          <div class="modal fade" id="C7Modal" tabindex="-1" aria-labelledby="C7ModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+              <div class="modal-content">
+                <!-- Themed Header -->
+                <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                  <h5 class="modal-title mb-0" id="complianceIssueModalLabel">Facilitating Staff Experience</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- Modal Body -->
+                <div class="card-body">
+                  <section class="staff-experience-course py-3 px-4 bg-light border rounded">
+                    <h2 class="mb-3">Facilitating Staff Experience</h2>
+
+                    <p>
+                      This course explores <strong>employee engagement</strong>: what it is, why it matters, what drives it,
+                      and what it means for your <strong>leadership and management role</strong>.
+                    </p>
+
+                    <p>
+                      The workshop includes:
+                    <ul>
+                      <li><strong>One full-day session</strong> focused on theory and exploration</li>
+                      <li><strong>Half-day practice session</strong> to apply learning in real-world contexts</li>
+                    </ul>
+                    It is offered across the Trust on various dates throughout the year.
+                    </p>
+
+                    <p>
+                      For further information, please email
+                      <a href="mailto:midyorks.org.dev@nhs.net">midyorks.org.dev@nhs.net</a>.
+                    </p>
+                  </section>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section C8 -->
+          <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#C8Modal">
+            ILM5 in Coaching & Mentoring
+          </button>
+          <!-- Modal -->
+          <div class="modal fade" id="C8Modal" tabindex="-1" aria-labelledby="C8ModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+              <div class="modal-content">
+                <!-- Themed Header -->
+                <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                  <h5 class="modal-title mb-0" id="complianceIssueModalLabel">ILM5 in Coaching & Mentoring</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- Modal Body -->
+                <div class="card-body">
+                  <section class="ilm5-coaching-mentoring py-3 px-4 bg-light border rounded">
+                    <h2 class="mb-3">ILM5 in Coaching &amp; Mentoring</h2>
+
+                    <p>
+                      This is a <strong>highly participative programme</strong> accredited by the
+                      <abbr title="Institute of Leadership and Management">ILM</abbr>.
+                      It offers a practical grounding in the distinctions between coaching and mentoring, and explores how coaching can support individual and organisational growth.
+                    </p>
+
+                    <p>
+                      You’ll gain the knowledge and skills to become a confident, well-practiced coach, capable of contributing to a robust coaching service within
+                      <strong>Mid Yorkshire Teaching NHS Trust</strong>.
+                    </p>
+
+                    <h3>🌱 What We Ask of Our Coaches</h3>
+                    <ul>
+                      <li>Coach a minimum of two individuals per year</li>
+                      <li>Offer up to six sessions per person (face-to-face or virtual), typically 90 minutes each</li>
+                      <li>Attend at least two supervision sessions every 12 months</li>
+                      <li>Maintain standards through CPD</li>
+                      <li>Follow agreed coaching systems, including session records and CPD evidence</li>
+                    </ul>
+
+                    <h3>📚 Programme Structure</h3>
+                    <ul>
+                      <li>Attendance of all <strong>8 workshops</strong> blending theory with practice</li>
+                      <li>Tutorial support and coaching supervision throughout</li>
+                      <li>Completion of <strong>3 written assignments</strong>:</li>
+                      <ul>
+                        <li><strong>Assignment 1:</strong> Theory paper on the role of coaching and mentoring (min. 5000 words)</li>
+                        <li><strong>Assignment 2:</strong> Coaching portfolio with 18 hours of recorded practice and reflections</li>
+                        <li><strong>Assignment 3:</strong> Reflective journal demonstrating your competence</li>
+                      </ul>
+                      <li>Completion of a recorded coaching session outside the taught programme</li>
+                    </ul>
+
+                    <p>
+                      This course is ideal for staff who wish to actively coach within the Trust and meet the participation criteria listed above.
+                      <strong>A manager’s statement of support</strong> must be completed as part of your application.
+                    </p>
+
+                    <p>
+                      For further information, please email
+                      <a href="mailto:midyorks.org.dev@nhs.net">midyorks.org.dev@nhs.net</a>.
+                    </p>
+                  </section>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section C9 -->
+          <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#C9Modal">
+            Leading an Empowered Organisation
+          </button>
+          <!-- Modal -->
+          <div class="modal fade" id="C9Modal" tabindex="-1" aria-labelledby="C9ModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+              <div class="modal-content">
+                <!-- Themed Header -->
+                <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                  <h5 class="modal-title mb-0" id="complianceIssueModalLabel">Leading an Empowered Organisation</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- Modal Body -->
+                <div class="card-body">
+                  <section class="leo-programme py-3 px-4 bg-light border rounded">
+                    <h2 class="mb-3">Leading an Empowered Organisation (LEO)</h2>
+
+                    <p>
+                      This <strong>three-day programme plus half-day follow-up</strong> is designed to support leadership growth and personal development
+                      for staff from a variety of disciplines. It promotes:
+                    <ul>
+                      <li>Relationship building</li>
+                      <li>Problem solving</li>
+                      <li>Managed risk taking</li>
+                      <li>Increased confidence and competence</li>
+                    </ul>
+                    </p>
+
+                    <h3>📘 Programme Topics</h3>
+                    <ul>
+                      <li>LEO Conceptual Framework</li>
+                      <li>Centralised vs Decentralised Approaches</li>
+                      <li>Distinction between Leading and Managing</li>
+                      <li>Articulated Expectations</li>
+                      <li>Task and Person Communication Styles</li>
+                    </ul>
+
+                    <p>
+                      <strong>Recommended for:</strong> Colleagues currently leading/managing others or those who have completed prior leadership training.
+                    </p>
+
+                    <p>
+                      <strong>Dates:</strong> Available in ESR.
+                    </p>
+                    <button aria-expanded="false" class="btn btn-primary btn-block" onclick="openPopup('https://my.esr.nhs.uk/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&oas=JKmb0a4n87vbpMoUiRvTvA..&params=svllrS6aKII3bb16i6RETqYTzVDPvukULPTJhE3VSwrpnif--wqoQVdMlBtZ0Id9Gt8L-LYEGljuNLD9br0lfYn03daCZa3YV2p.OFK.GzI');">Book Place</button>
+                  </section>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section C10 -->
+          <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#C10Modal">
+            Leading an Empowered Team
+          </button>
+          <!-- Modal -->
+          <div class="modal fade" id="C10Modal" tabindex="-1" aria-labelledby="C10ModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+              <div class="modal-content">
+                <!-- Themed Header -->
+                <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                  <h5 class="modal-title mb-0" id="complianceIssueModalLabel">Leading an Empowered Team</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- Modal Body -->
+                <div class="card-body">
+                  <section class="empowered-team-course py-3 px-4 bg-light border rounded">
+                    <h2 class="mb-3">Leading an Empowered Team</h2>
+
+                    <p>
+                      This <strong>2-day interactive programme</strong> introduces participants to the complexities of leadership, empowerment, and team dynamics.
+                      It prepares individuals to step confidently into leading change or managing projects within a team setting.
+                    </p>
+
+                    <p>
+                      <strong>Suitable for:</strong>
+                    <ul>
+                      <li>Existing managers</li>
+                      <li>Aspiring first-time line managers</li>
+                      <li>Typically aimed at colleagues in Bands 3 to 5</li>
+                    </ul>
+                    </p>
+
+                    <p>
+                      <strong>Dates:</strong> Available in ESR.
+                    </p>
+                    <button aria-expanded="false" class="btn btn-primary btn-block" onclick="openPopup('https://my.esr.nhs.uk/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&oas=JKmb0a4n87vbpMoUiRvTvA..&params=mxTonwHXqou52Sg85JCGIlXrtKUu.uN7xrXz3-TzIaPjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c');">Book Place</button>
+                  </section>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section C11 -->
+          <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#C11Modal">
+            Participating in an Empowered Team
+          </button>
+          <!-- Modal -->
+          <div class="modal fade" id="C11Modal" tabindex="-1" aria-labelledby="C11ModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+              <div class="modal-content">
+                <!-- Themed Header -->
+                <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                  <h5 class="modal-title mb-0" id="complianceIssueModalLabel">Participating in an Empowered Team</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- Modal Body -->
+                <div class="card-body">
+                  <section class="empowered-team-participant py-3 px-4 bg-light border rounded">
+                    <h2 class="mb-3">Participating in an Empowered Team</h2>
+
+                    <p>
+                      This <strong>1-day interactive programme</strong> introduces participants to the dynamics of teamwork,
+                      the importance of shared values and behaviours, and their impact on <strong>trust within teams</strong>.
+                      It highlights the roles we all play in shaping how our teams function and collaborate.
+                    </p>
+
+                    <h3>🎯 Ideal for Participants Seeking to:</h3>
+                    <ul>
+                      <li>Play a more interactive role within their team</li>
+                      <li>Understand more about team dynamics</li>
+                      <li>Learn strategies for influencing others to enhance team working</li>
+                    </ul>
+
+                    <p>
+                      <strong>Dates:</strong> Available in ESR.
+                    </p>
+                    <button aria-expanded="false" class="btn btn-primary btn-block" onclick="openPopup('https://my.esr.nhs.uk/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&oas=JKmb0a4n87vbpMoUiRvTvA..&params=cUuIWGXOd1DOFwh1.4s3T9lH3Bdba7t7F1bB9S0cGM-jqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c');">Book Place</button>
+                  </section>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Section C12 -->
+          <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#C12Modal">
+            Managing People
+          </button>
+          <!-- Modal -->
+          <div class="modal fade" id="C12Modal" tabindex="-1" aria-labelledby="C12ModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+              <div class="modal-content">
+                <!-- Themed Header -->
+                <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                  <h5 class="modal-title mb-0" id="complianceIssueModalLabel">Managing People</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- Modal Body -->
+                <div class="card-body">
+                  <section class="managing-people-course py-3 px-4 bg-light border rounded">
+                    <h2 class="mb-3">Managing People</h2>
+
+                    <p>
+                      This <strong>1-day interactive workshop</strong> is designed to help line managers boost their confidence when managing staff.
+                      Participants will explore best practices and gain practical tools and tips to enhance their effectiveness in leading people.
+                    </p>
+
+                    <p>
+                      <strong>Suitable for:</strong>
+                    <ul>
+                      <li>Line Managers</li>
+                      <li>Staff who supervise others</li>
+                    </ul>
+                    </p>
+
+                    <p>
+                      <strong>Dates:</strong> Available in ESR.<br>
+                      <button aria-expanded="false" class="btn btn-primary btn-block" onclick="openPopup('https://my.esr.nhs.uk/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&oas=JKmb0a4n87vbpMoUiRvTvA..&params=T02w-GoylEbSN8OyDnZXBHVi8dQpkGq.X1oYRJ43mpnjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c');">Book Place</button>
+                    </p>
+                  </section>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Section C13 -->
+          <button type="button" class="btn btn-primary w-100 text-start mb-2" data-bs-toggle="modal" data-bs-target="#C13Modal">
+            Sage & Thyme
+          </button>
+          <!-- Modal -->
+          <div class="modal fade" id="C13Modal" tabindex="-1" aria-labelledby="C13ModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+              <div class="modal-content">
+                <!-- Themed Header -->
+                <div class="modal-header btn btn-primary w-100 text-start d-flex justify-content-between align-items-center">
+                  <h5 class="modal-title mb-0" id="complianceIssueModalLabel">Sage & Thyme</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- Modal Body -->
+                <div class="card-body">
+                  <section class="sage-thyme-workshop py-3 px-4 bg-light border rounded">
+                    <h2 class="mb-3">Sage &amp; Thyme</h2>
+
+                    <p>
+                      <strong>Do you know how to talk to someone who is worried or distressed?</strong><br>
+                      The Sage &amp; Thyme workshop teaches evidence-based communication skills to support compassionate and effective conversations.
+                    </p>
+
+                    <h3>🧠 Workshop Includes:</h3>
+                    <ul>
+                      <li>A memorable, structured approach for entering and exiting conversations</li>
+                      <li>Techniques for empowering colleagues, patients, carers, or anyone experiencing worry or distress</li>
+                      <li>Evidence-based communication strategies</li>
+                    </ul>
+
+                    <h3>🕒 Delivery Format</h3>
+                    <ul>
+                      <li><strong>Face-to-face sessions:</strong> 3 hours</li>
+                      <li><strong>Online workshops:</strong> 2 hours 45 minutes</li>
+                      <li>Interactive format with group work, presentations, discussions, and scenarios</li>
+                    </ul>
+
+                    <p>
+                      <strong>Dates:</strong> Available in ESR.<br>
+
+                    </p>
+                    <button aria-expanded="false" class="btn btn-primary btn-block" onclick="openPopup('https://my.esr.nhs.uk/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&oas=JKmb0a4n87vbpMoUiRvTvA..&params=gOVDt9iXYoY3gqbCuK3UArNujWlnHUT-F5UwixPOChXjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c');">Book Place on a Face to Face Course</button>
+                    <button aria-expanded="false" class="btn btn-primary btn-block" onclick="openPopup('https://my.esr.nhs.uk/OA_HTML/RF.jsp?function_id=18931&resp_id=-1&resp_appl_id=-1&security_group_id=0&lang_code=US&oas=JKmb0a4n87vbpMoUiRvTvA..&params=vRbdqigYEgcjJpmd7ctCm18eUD-BWh1uMtaMafpcyczjqmc8GjONz5gXLyN7DUgpolGCdLYoiv5z9-CiuyyplscZXUiFSbGwKJ2TS0fMk1c');">Book Place on a Teams Course</button>
+                  </section>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End of Sections -->
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- ======================================================
+=            STATUTORY & MANDATORY TRAINING PAGE          =
+========================================================= 
+  <div id="SaMT" class="page">
+    <div class="container">
+      <div class="banner-wrapper">
+        <img src="https://assets.codepen.io/8889025/MY-Logo-Banner.png" class="Banner_image" alt="Welcome Hub Banner">
+        <div class="banner-text-overlay">
+          <h2>Learning and Development Hub</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 gradient-col d-flex align-items-center justify-content-center">
+          <h3 class="gradient-text">Statutory and Mandatory Training</h3>
+        </div>
+
+        <div class="col-md-8">
+          <h4>Statutory and Mandatory Training</h4>
+          <p>This section provides access to courses you can book via ESR. All training that you are required to complete will be showing in My Compliance on the ESR portal. Please use the guides to show you how to play these courses.</p>
+          <button aria-expanded="false" class="btn btn-primary btn-block" onclick="showPage('SaMT');">Mandatory and Statutory Training</button>
+          <button aria-expanded="false" class="btn btn-primary btn-block" onclick="showPage('NSaMT');">Non Mandatory and Statutory Training</button>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md">
+
+          <!-- Card 1 
+          <div class="card mb-2">
+            <div class="card-header">
+              <button class="btn" data-bs-toggle="collapse" data-bs-target="#card-details" aria-expanded="false">
+                Basic Life Support (BLS)
+              </button>
+            </div>
+            <div id="card-details" class="collapse">
+              <div class="card-body">
+                <p><b>Who should attend:</b> For all staff who have access to emergency response bag and a duty to respond.</p>
+                <p><b>Learning Method:</b> Face to face and competency assessment (3 hours 30 minutes).</p>
+                <p><b>Additional Information:</b> This Training course covers both the practical and theory-based elements of Basic Life Support. This Course is required for all Staff who has a duty to respond and have access to the emergency response bag.</p>
+                <p><b>How to book: </b><a class="btn btn-primary" href="#" onclick="openPopup('https://intranet.tewv.nhs.uk/training-centre');" role="button">BOOK NOW</a>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+  </div>
+      -->
+  <!-- ======================================================
+=         NON-STATUTORY & MANDATORY TRAINING PAGE         =
+========================================================= 
+  <div id="NSaMT" class="page">
+    <div class="container">
+      <div class="banner-wrapper">
+        <img src="https://assets.codepen.io/8889025/MY-Logo-Banner.png" class="Banner_image" alt="Welcome Hub Banner">
+        <div class="banner-text-overlay">
+          <h2>Learning and Development Hub</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 gradient-col d-flex align-items-center justify-content-center">
+          <h3 class="gradient-text">Non Statutory Mandatory Training</h3>
+        </div>
+
+        <div class="col-md-8">
+          <h4>Non Statutory and Mandatory Training</h4>
+
+          <p>This section provides access to Non Statutory and Manadatory courses you can book via ESR. The categories are listed below.</p>
+          <button aria-expanded="false" class="btn btn-primary btn-block" onclick="showPage('SaMT');">Mandatory and Statutory Training</button>
+          <button aria-expanded="false" class="btn btn-primary btn-block" onclick="showPage('NSaMT');">Non Mandatory and Statutory Training</button>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md">
+
+          <!-- Card 1 
+          <div class="card mb-2">
+            <div class="card-header">
+              <button class="btn" data-bs-toggle="collapse" data-bs-target="#card-details" aria-expanded="false">
+                Appraiser Training
+              </button>
+            </div>
+            <div id="card-details" class="collapse">
+              <div class="card-body">
+                <p><b>Who should attend:</b></p>
+                <p><b>Learning Method:</b></p>
+                <p><b>Additional Information:</b></p>
+                <p><b>How to book: </b><a class="btn btn-primary" href="#" onclick="openPopup('');" role="button">BOOK NOW</a>
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ======================================================
+=                     SUPPORT REQUEST SECTION                 =
+========================================================= 
+  <div id="SUP" class="page">
+    <div class="container">
+      <div class="banner-wrapper">
+        <img src="https://assets.codepen.io/8889025/MY-Logo-Banner.png" class="Banner_image" alt="Welcome Hub Banner">
+        <div class="banner-text-overlay">
+          <h2>Learning and Development Hub</h2>
+        </div>
+      </div>
+      <div class="row">
+
+        <div class="col-md-4 gradient-col d-flex align-items-center justify-content-center">
+          <h3 class="gradient-text">Support Request</h3>
+        </div>
+        <div class="col-md-8">
+          <h4>ESR Learning Management Support Request</h4>
+          <p>If this site does not give you the advice and support you need please fill in the form below and one of our support team will be in touch soon.</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md">
+          <div class="ratio ratio-4x3" style="max-width: 100%;">
+            <iframe src="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAa__eBfvaBUOU4zQ0wzV1lVOFkxM05SUk8yVkNBM1BWVS4u&embed=true" allowfullscreen style="border: none;"></iframe>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>-->
+
+  <!-- ======================================================
+=                     FULLSCREEN MODAL                    =
+========================================================= -->
+  <!-- Fullscreen Modal -->
+  <!-- Expandable Modal -->
+  <div class="modal fade" id="cardModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <h5 class="modal-title">Details</h5>
+          <button type="button" class="btn-close collapse-cards" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="cardModalBody">
+          <!-- Card content will be inserted here -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+<footer></footer>
+<!-- Bootstrap Bundle JS (includes Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Your Custom Script -->
+<script src="script.js"></script>
+
+</html>
